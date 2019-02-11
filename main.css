@@ -1,0 +1,353 @@
+
+body{
+    background-color: rgb(197, 197, 197);
+    /* background: url("images/moogblack.jpg");
+    background-size: cover; */
+   
+}
+
+.page{
+    border: solid;
+    height: 150vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .7fr .3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-family: 'Righteous';
+    /* color: orange */
+}
+#logo{
+    
+    background: linear-gradient(rgb(82, 252, 238), rgb(17, 40, 167));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    #logo2{
+    
+        background: linear-gradient(rgb(82, 252, 238), rgb(17, 40, 167));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    #logoimg{
+        height: 120px;
+       transform: scale(1.2);
+    }
+.top{
+    background: linear-gradient(rgb(82, 252, 238), rgb(17, 40, 167));
+  
+}
+#name{
+    grid-column: 2/ 4;
+    font-family: 'Righteous';
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(26, 25, 25, 0.527);
+    color: rgb(255, 236, 131);
+}
+
+/* #about{
+    grid-column: 1/ 3;
+} */
+.nav{
+    text-align: center;
+    border: solid black;
+    background: rgb(17, 40, 167);
+    color: rgb(255, 236, 131);
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: all .5s ease;
+
+}
+.nav:hover{
+    transform: scale(1.1);
+    background: black;
+    color:  rgb(255, 236, 131);
+    border:solid  rgb(255, 236, 131);
+    border-radius: 10px;
+}
+
+#logoimg:hover{
+    transform: scale(1.3);
+}
+.footer{
+    grid-column: 1/ 5;
+    grid-row: 8/9;
+    background: url("images/eurogif.gif");
+    background-size: cover;
+    background-position-y: -533px;
+    border: solid;
+}
+
+/* ==================================
+--------------navbar and footer above
+========================================
+=========================================
+---------home page below----------------
+======================================= */
+
+.slideshow{
+ grid-column: 2/4;
+ grid-row: 3/ 6;
+ 
+ margin-top: 20px;
+animation: slideshow 30s infinite;
+background-size: contain;
+}
+@keyframes slideshow{
+    0% {
+background: url("images/sinegif.gif")
+    }
+    25%{
+        background: url("images/mooggif.gif");
+       
+    }
+    50%{
+        background: url("images/sh101.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    75%{
+        background: url("images/system100.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    } 
+    100%{
+        background: url("images/cs20.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+.homeinfo{
+    grid-row: 6/8;
+    grid-column: 1/5;
+    text-align: center;
+    font-size: 2em
+}
+
+/* ================================================
+================info page below=====================
+-========-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ */
+
+ .ssabout{
+     grid-column: 1 /5;
+     grid-row: 5/7;
+     font-size: 1.5em;
+     margin-left: 10px;
+     margin-right: 10px;
+ }
+ .products{
+     font-size: 1.5em;
+     text-align: center;
+     grid-column: 4 /5;
+     grid-row: 3/5;
+     margin-top: 80px;
+ }
+
+ .products li{
+     text-align: left;
+ }
+ .aboutlogo{
+     grid-column: 2/ 4;
+     grid-row: 3 /5;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("images/19447-200.png");
+   margin-left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ .create{
+    grid-column: 2/ 4;
+    grid-row: 7/8;
+    text-align: center;
+    font-size: 4em;
+    
+ }
+ #create{
+    text-decoration: none;
+    color: rgb(82, 252, 238);
+ }
+ .create:hover{
+     transform: scale(1.1);
+ }
+/* =============================================
+==================================================
+-------------Synths page--------------------------
+=================================================== */
+.synthinfo{
+    border: solid;
+    grid-row: 4/8;
+    margin: 5px;
+    border-radius: 10px;
+    background: linear-gradient(white,gray);
+    box-shadow: 5px 5px 5px ;
+    text-align: center
+}
+
+#minim{
+    margin: 5px;
+}
+#sys100{
+    margin: 10px
+}
+#sh101{
+    margin:10px;
+    margin-left: 20px;
+}
+#cs80{
+    margin: 10px;
+}
+.synthheader{
+    grid-column: 1 / 5;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.479)
+}
+
+
+.modalbg{
+    width: 100%;
+    height: 160vh;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modaldialog{
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255,255, 1);
+    position: absolute;
+    text-align: center;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: center;
+}
+.modalbg:target {
+    opacity: 1;
+    pointer-events: auto;
+   display: flex;
+}
+.close{
+    font-size: 30px;
+    /* margin-left: 100%; */
+    text-decoration: none;
+   color: black;
+
+}
+
+
+#baj{
+    border: solid green;
+    height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    background: green;
+    color: beige;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* ===========================
+======================================
+--------------------------------------
+-------drum machines-------------------
+======================= */
+.drumheader{
+    grid-column: 1/5;
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.479)
+}
+
+.buydrums{
+    grid-row: 4/8;
+    grid-column: 1 / 3;
+    border: solid;
+    margin: 10px;
+    border-radius: 10px;
+    background: linear-gradient(white,gray);
+    box-shadow: 5px 5px 5px ;
+    text-align: center
+}
+.buydrums2{
+    grid-row: 4/8;
+    grid-column: 3 / 5;
+    border: solid;
+margin: 10px;
+border-radius: 10px;
+background: linear-gradient(white,gray);
+box-shadow: 5px 5px 5px ;
+text-align: center
+}
+.drumimg{
+    margin-top: 10px;
+}
+
+/* ======================================
+================================================
+-----------products pages----------------==
+============================ */
+.productimg{
+    grid-row: 3/5;
+    grid-column: 2/4;
+    /* border: solid; */
+    text-align: center;
+    margin-top: 10px;
+}
+.productinfo{
+    grid-row: 5/8;
+    grid-column: 1/5;
+    /* border: solid; */
+    text-align: center;
+  font-size: 1.3em;
+}
+
+
+/* =========================================
+============================================
+make music pages============================
+---------------------------------------- */
+
+.drums{
+    grid-row: 4/5;
+    grid-column: 1/3;
+    margin: 10px;
+}
+
+.synthseq{
+    grid-row: 5/6;
+    grid-column: 1/3;
+    margin: 10px;
+    background: lightseagreen;
+}
+.bpmswing{
+    margin: 20px;
+    grid-row: 4/5;
+    grid-column: 3/4;
+    border: solid;
+
+}
+.drums{
+    background-color: crimson
+}
+.effects{
+    margin: 20px;
+    grid-row: 5/6;
+    grid-column: 3/4;
+    border: solid;
+    text-align: center;
+    padding: 20px;
+}
